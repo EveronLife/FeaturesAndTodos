@@ -32,6 +32,9 @@
     - Develop a system for players to send emergency messages to all police.
 - **Warrant Management**
     - Implement a database for creating and deleting arrest warrants.
+- **Fines**
+    - Implement a sytem for a police to give fines. Boundaries should be defined in a config
+    - The config should define how much of the fine (x%) should be transfered to the policemen 
 
 ### **4. Police Vehicles and Equipment**
 

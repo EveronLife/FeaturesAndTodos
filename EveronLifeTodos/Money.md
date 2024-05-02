@@ -31,9 +31,6 @@
 ### **4. Money Sinks**
 
 - **Purchased Items**
-    - Weapons, clothing etc can't be looted from bodies. This is an important money sink and a way to keep gear from piling up.
-- **Progressive Fines**
-    - Players with a lot of money will receive higher fines. This way they will remain impactful even to wealthy players.
-    - The difference between the base fine price and the increased price will not be paid to the officer giving the fine, to delete the money from circulation.
+    - Implement a toggleable config switdch so Weapons, clothing etc can't be looted from bodies. 
 - **Cosmetics**
     - Through some system, players should be able to spend large sums of money on cosmetic unlocks (clothing, vehicle skins etc.).
