@@ -1,0 +1,93 @@
+# Modular Collision Detection System
+
+### **1. Collision Box Definition**
+
+- **Define Collision Box Entity**
+    - Develop a basic collision box entity that acts as a trigger zone for various interactions within the game environment. This entity should be scalable and configurable in the editor to fit different areas and use cases.
+    ```cpp
+    [EntityEditorProps(category: "Gameplay/Triggers", description: "Collision detection box for various interactions.")]
+    class SCR_CollisionBoxEntity : SCR_BaseEntity
+    {
+        private Box m_CollisionBox;
+        private bool m_IsColliding = false;
+
+        void SCR_CollisionBoxEntity(IEntitySource src, IEntity parent)
+        {
+            super(src, parent);
+            m_CollisionBox = new Box(Vector(-1, -1, -1), Vector(1, 1, 1)); // Initial size
+        }
+
+        override void OnUpdate(float deltaTime)
+        {
+            array<IEntity> collidingEntities = {};
+            GetGame().GetWorld().QueryEntitiesByBox(m_CollisionBox, collidingEntities);
+            m_IsColliding = collidingEntities.Count() > 0;
+        }
+
+        void SetCollisionBoxSize(Vector newSize)
+        {
+            m_CollisionBox.SetSize(newSize);
+        }
+    };
+    ```
+
+### **2. Interaction and Event Handling**
+
+- **Setup Interaction Scripts**
+    - Create scripts that handle the entry and exit of entities within the collision box. These scripts should be capable of triggering specific events or actions, such as collecting resources or detecting player presence.
+    - Implement a system where different entities interact with the collision box in unique ways, depending on their type and state.
+    ```cpp
+    void HandleEntityInteractions(array<IEntity> entities)
+    {
+        foreach (IEntity entity : entities)
+        {
+            if (entity.HasComponent<SCR_InteractiveComponent>())
+            {
+                // Perform specific interactions based on the component's functionality
+            }
+        }
+    }
+    ```
+
+### **3. Modular Implementation**
+
+- **Extend Collision Box for Various Gameplay Features**
+    - Utilize the base collision box class to create specialized versions for different gameplay mechanics such as enemy detection zones, safe areas, or resource collection points.
+    - Ensure that each specialized collision box can handle specific interactions and has parameters for customization in the editor, allowing for easy adjustments and tuning.
+    ```cpp
+    class SCR_EnemyDetectionCollisionBox : SCR_CollisionBoxEntity
+    {
+        override void OnUpdate(float deltaTime)
+        {
+            super.OnUpdate(deltaTime);
+            if (m_IsColliding)
+            {
+                array<IEntity> enemyEntities = {};
+                GetGame().GetWorld().QueryEntitiesByType<SCR_EnemyEntity>(enemyEntities);
+                HandleEntityInteractions(enemyEntities);
+            }
+        }
+    }
+    ```
+
+### **4. Uses:**
+
+- **Spawn in lootables/gatherables in a specific area**
+- **Detection Systems for Police and militarized factions in the RP world**
+- **Modular Triggers for Events**
+- **Safe Zones Creation**
+  - Create areas where gameplay mechanics such as combat or resource depletion are disabled, ideal for player rest zones or narrative-driven safe havens.
+- **Dynamic Weather Effects**
+  - Use collision boxes to trigger weather changes within specific areas, enhancing the atmospheric immersion. For instance, entering a region could initiate rain or fog.
+- **Environmental Hazards**
+  - Set up zones that deal damage or apply status effects (like poison or radiation) to players or NPCs when they enter the area, perfect for creating challenging environments or hazards in survival games.
+- **Resource Management Zones**
+  - Designate specific areas where resource regeneration rates are accelerated or decreased, influencing player decisions on where to gather or farm resources.
+- **Tutorial Zones**
+  - Implement collision boxes to detect new players entering a zone and trigger tutorial prompts or guidance, helping them learn game mechanics in a controlled setting.
+- **Dynamic NPC Spawner**
+  - Configure collision boxes to spawn NPCs dynamically as players enter certain areas, optimizing performance by only populating NPCs when needed.
+- **Area-Specific Narratives**
+  - Trigger storytelling elements or missions when entering certain zones, seamlessly integrating narrative with exploration.
+- **Player-Made Traps**
+  - Allow players to set up their own collision-based traps that trigger when an enemy enters a designated area, adding depth to player-versus-player interactions.
