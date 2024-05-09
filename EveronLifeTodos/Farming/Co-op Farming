@@ -1,0 +1,43 @@
+# Coop Farming
+# Adaptation of Combined Farming:
+
+### **1. Resource Gathering**
+
+- **Grown, Hunted, Fished**
+    - Grown vegetables from seed purchased at markets, or found and harvested.
+    - Ensure each material can be gathered independently, requiring player interaction and possibly specific tools or skills.
+    - Meats or fish hunted from NPC animals, or fishing in water with a pole system.
+
+### **2. Sell to Player owned restaurant **
+
+- **Restaurant, Limited access crafting**
+    - Restaurants are locked only to players with key to the restaurant, which has special crafting tables to make specialized consumables by combinging harvested items.
+      
+         -Example:  
+## Player Owned Restaurant  (limited access crafting)
+## Player House (Stovetop/crafting)
+
+{Recipe 1: burger
+   {Lettuce(farming) +Meat(hunting)+bread
+    }
+ Burger( ++health, ++stamina, ++weapon sway)
+ }
+
+{Recipe 2: fish_sandwich
+ {Lettuce(farming)+Fish(fishing)+bread(wheat:farm)   	
+  }
+Fish Sandwich(++harvesting, ++mining, ++health)	
+}
+
+
+	
+
+
+         -
+
+### **3.Restaurants can sell items to other players, or put up on player market**
+
+- **Sales for End Products**
+    - Develop options for players to sell Product C either to NPCs or through player-owned shops within the game.
+    - Ensure the selling mechanism integrates seamlessly with the game’s economy, with balanced pricing and demand factors.
+    - Restaurants will continuously need an inflow of harvested items from farmers to make consumables and restaurant owners can sell directly via RP, or Utilize stocking a vending machine placed throughout the map
