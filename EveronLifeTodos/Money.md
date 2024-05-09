@@ -16,6 +16,7 @@
     - Some NPC transactions may require additional conditions like bribes or licenses (e.g., Rebel License).
 - **Money Transfer System**
     - Allow players to send money to other accounts, including those of both online and offline players.
+    - Take a small fee of all transactions as a money sink. Adjustable by server admins.
     - Ensure transactions are secure and logged within the game's banking system.
 
 ### **3. Passive Income and Investments**
@@ -26,3 +27,10 @@
     - Implement an investment feature where players can invest their in-game money.
     - Offer specific locations where investments can be made.
     - Determine if the return on investments should be based on random fluctuations or mimic real-world financial markets.
+
+### **4. Money Sinks**
+
+- **Purchased Items**
+    - Implement a toggleable config switdch so Weapons, clothing etc can't be looted from bodies. 
+- **Cosmetics**
+    - Through some system, players should be able to spend large sums of money on cosmetic unlocks (clothing, vehicle skins etc.).
