@@ -14,3 +14,6 @@
 5. **Item Management**
     - **Delete Items:** Allow admins to delete any item from the game, which can be used to remove glitched items or clean up abandoned equipment.
     - **Spawn Items:** Implement a feature for admins to spawn items, which can be used for event management or to assist players in distress.
+5. **Moderate Players**
+    - **Kick Players:** 
+    - **Ban Players:** 
