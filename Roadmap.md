@@ -67,6 +67,15 @@
 - Invisibility Toggle
 - Teleportation Features
 
+## [Fractions](EveronLifeTodos/Fractions.md)
+- Reb (Points 6)
+
+## [Farming](EveronLifeTodos/Farming.md)
+- Combined Farming
+- Time Based Farming
+
+## [Player](EveronLifeTodos/Player.md)
+- Gestures
 
 # Phase 3
 ## [Progression](EveronLifeTodos/Progression.md)
@@ -86,35 +95,24 @@
 - House Upgrades
 - Clan House Conversion
 
-
 ## [Moderativ](EveronLifeTodos/Moderativ.md)
 - Vehicle Management
 - Item Management
 
-
-----------
-
-
-
 ## [Money](EveronLifeTodos/Money.md)
 - Investments
 
-## [Fractions](EveronLifeTodos/Fractions.md)
-- Reb (Points 6)
-
-
-
 ## [Farming](EveronLifeTodos/Farming.md)
 - AI Farming
-- Combined Farming
-- Time Based Farming
-
-
-
 
 ## [Player](EveronLifeTodos/Player.md)
 - Character Customization
 
 
-## [Player](EveronLifeTodos/Player.md)
-- Gestures
+
+
+
+
+
+
+
